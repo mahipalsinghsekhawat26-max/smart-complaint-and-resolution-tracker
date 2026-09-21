@@ -1,12 +1,19 @@
 from flask import Flask, render_template, request, redirect, url_for, session, flash
 import sqlite3
 from datetime import datetime, timedelta
+from pathlib import path
 
-app = Flask(__name__)
+BASE_DIR = Path(__file__).resolved().parent
+
+app = flask(
+    __name__,
+    template_folder=str(BASE_DIR/"templates"),
+    static_folder=str(BASE_DIR/"static")
+)
+
 app.secret_key = "smart_complaint_secret"
 
-DATABASE = "complaints.db"
-
+DATABASE = str(BASE_DIR/"complaints.db")
 
 # ---------------- DATABASE ----------------
 
