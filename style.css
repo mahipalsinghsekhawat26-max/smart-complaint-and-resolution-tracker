@@ -1,0 +1,64 @@
+body {
+    background: #f5f7fb;
+    font-family: Arial, sans-serif;
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+.hero {
+    padding: 90px 20px;
+    background: white;
+    border-radius: 20px;
+    margin-top: 30px;
+}
+
+.hero h1 {
+    font-size: 45px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+}
+
+.feature {
+    background: white;
+    padding: 30px;
+    text-align: center;
+    border-radius: 18px;
+    height: 100%;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.feature h3 {
+    font-size: 40px;
+}
+
+.form-box {
+    background: white;
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+}
+
+.card {
+    border: none;
+    border-radius: 18px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+}
+
+.stat-card {
+    background: white;
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+}
+
+.stat-card h2 {
+    font-size: 35px;
+}
