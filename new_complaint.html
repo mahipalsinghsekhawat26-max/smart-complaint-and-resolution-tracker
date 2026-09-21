@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="form-box">
+
+<h2>📝 Submit Complaint</h2>
+
+<form method="POST">
+
+
+<label>Category</label>
+
+<select name="category"
+class="form-select mb-3"
+required>
+
+<option>Wi-Fi / Internet</option>
+
+<option>Electricity</option>
+
+<option>Water</option>
+
+<option>Cleaning</option>
+
+<option>Classroom / Furniture</option>
+
+<option>Other</option>
+
+</select>
+
+
+<label>Complaint Title</label>
+
+<input
+name="title"
+class="form-control mb-3"
+placeholder="Example: Wi-Fi not working"
+required>
+
+
+<label>Description</label>
+
+<textarea
+name="description"
+class="form-control mb-3"
+rows="4"
+placeholder="Explain your problem..."
+required>
+</textarea>
+
+
+<label>Location</label>
+
+<input
+name="location"
+class="form-control mb-3"
+placeholder="Example: Lab 2"
+required>
+
+
+<label>Priority</label>
+
+<select
+name="priority"
+class="form-select mb-3">
+
+<option>Low</option>
+
+<option selected>Medium</option>
+
+<option>High</option>
+
+</select>
+
+
+<button class="btn btn-primary">
+
+Submit Complaint 🚀
+
+</button>
+
+</form>
+
+</div>
+
+{% endblock %}

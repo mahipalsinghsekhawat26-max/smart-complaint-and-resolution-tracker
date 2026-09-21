@@ -1,0 +1,149 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="d-flex justify-content-between mb-4">
+
+<h2>
+Welcome {{ session["name"] }} 👋
+</h2>
+
+{% if session["role"] == "student" %}
+
+<a href="{{ url_for('new_complaint') }}"
+   class="btn btn-primary">
+
++ New Complaint
+
+</a>
+
+{% endif %}
+
+</div>
+
+
+<div class="card p-4">
+
+<h4>Your Complaints</h4>
+
+<table class="table table-hover">
+
+<thead>
+
+<tr>
+
+<th>Complaint ID</th>
+
+{% if session["role"] == "admin" %}
+
+<th>Student</th>
+
+{% endif %}
+
+<th>Title</th>
+
+<th>Department</th>
+
+<th>Priority</th>
+
+<th>Status</th>
+
+<th>Action</th>
+
+</tr>
+
+</thead>
+
+
+<tbody>
+
+{% for c in complaints %}
+
+<tr>
+
+<td>
+
+<strong>{{ c["complaint_id"] }}</strong>
+
+</td>
+
+
+{% if session["role"] == "admin" %}
+
+<td>
+
+{{ c["name"] }}
+
+</td>
+
+{% endif %}
+
+
+<td>
+
+{{ c["title"] }}
+
+</td>
+
+
+<td>
+
+{{ c["department"] }}
+
+</td>
+
+
+<td>
+
+{{ c["priority"] }}
+
+</td>
+
+
+<td>
+
+<span class="badge bg-primary">
+
+{{ c["status"] }}
+
+</span>
+
+</td>
+
+
+<td>
+
+<a
+href="{{ url_for('complaint', id=c['id']) }}"
+class="btn btn-sm btn-outline-primary">
+
+View
+
+</a>
+
+</td>
+
+</tr>
+
+{% else %}
+
+<tr>
+
+<td colspan="7"
+class="text-center">
+
+No complaints found.
+
+</td>
+
+</tr>
+
+{% endfor %}
+
+</tbody>
+
+</table>
+
+</div>
+
+{% endblock %}

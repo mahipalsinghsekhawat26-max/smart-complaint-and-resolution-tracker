@@ -1,0 +1,109 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="hero text-center">
+
+<h1>Smart Complaint & Resolution Tracker 🚀</h1>
+
+<p>
+Report. Track. Resolve. Improve.
+</p>
+
+<p class="lead">
+
+A simple digital platform for managing
+college complaints efficiently.
+
+</p>
+
+<a href="{{ url_for('register') }}"
+   class="btn btn-primary btn-lg">
+
+Register Complaint
+
+</a>
+
+<a href="{{ url_for('login') }}"
+   class="btn btn-outline-dark btn-lg">
+
+Login
+
+</a>
+
+</div>
+
+
+<div class="row mt-5">
+
+<div class="col-md-3">
+
+<div class="feature">
+
+<h3>📝</h3>
+
+<h5>Easy Complaint</h5>
+
+<p>
+Submit complaints quickly.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="col-md-3">
+
+<div class="feature">
+
+<h3>⚙️</h3>
+
+<h5>Auto Assignment</h5>
+
+<p>
+Complaint goes to the
+right department.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="col-md-3">
+
+<div class="feature">
+
+<h3>⏰</h3>
+
+<h5>Track Status</h5>
+
+<p>
+Know exactly what is happening.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="col-md-3">
+
+<div class="feature">
+
+<h3>📊</h3>
+
+<h5>Smart Analytics</h5>
+
+<p>
+Find repeated problems.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+{% endblock %}
