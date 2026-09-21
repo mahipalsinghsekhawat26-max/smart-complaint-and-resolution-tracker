@@ -1,9 +1,9 @@
 from flask import Flask, render_template, request, redirect, url_for, session, flash
 import sqlite3
 from datetime import datetime, timedelta
-from pathlib import path
+from pathlib import Path
 
-BASE_DIR = Path(__file__).resolved().parent
+BASE_DIR = Path(__file__).resolve().parent
 
 app = flask(
     __name__,
