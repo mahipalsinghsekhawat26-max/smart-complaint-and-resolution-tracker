@@ -5,7 +5,7 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent
 
-app = flask(
+app = Flask(
     __name__,
     template_folder=str(BASE_DIR/"templates"),
     static_folder=str(BASE_DIR/"static")
